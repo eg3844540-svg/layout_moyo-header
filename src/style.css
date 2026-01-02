@@ -1,3 +1,73 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #00a0ff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+header > a,
+header > nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+nav {
+  margin-left: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li:not(:last-child) {
+  margin-right: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+.is-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
 }
