@@ -1,73 +1,38 @@
-* {
+.page {
+  font-family: Roboto, sans-serif;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-:root {
-  --blue: #00a0ff;
+.header {
+  background-color: #0a4fd8; /* azul mantido */
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
 
-header {
-  width: 100%;
   display: flex;
   align-items: center;
-  background-color: #fff;
+  justify-content: space-between;
 }
 
-header > a,
-header > nav {
+.header-logo {
+  height: 42px;
+}
+
+.nav {
   display: flex;
-  align-items: center;
+  gap: 24px;
 }
 
-.logo img {
-  height: 40px;
-  display: block;
-}
-
-nav {
-  margin-left: 40px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav li:not(:last-child) {
-  margin-right: 32px;
-}
-
-a {
+.nav-link {
+  color:#fff;
   text-decoration: none;
-  color: #000;
-  font-size: 12px;
-  text-transform: uppercase;
-  height: 60px;
-  display: flex;
-  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-a:hover {
-  color: var(--blue);
-}
-
-.is-active {
-  position: relative;
-  color: var(--blue);
-}
-
-.is-active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--blue);
+.nav-link:hover {
+  opacity: 0.85;
 }
