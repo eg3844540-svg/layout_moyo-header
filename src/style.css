@@ -1,52 +1,66 @@
-body {
-  margin: 0;
-  font-family: Roboto, Arial, sans-serif;
-}
-
-/* Variável de cor obrigatória */
 :root {
-  --color-blue: #1e88e5;
+  --color-blue: #0a4fd8;
+  --color-text: #000;
 }
 
-/* HEADER */
+.page {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
 .header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+
   display: flex;
   align-items: center;
-  gap: 48px;
+  justify-content: space-between;
 }
 
-/* LOGO */
-.logo img {
+.header-logo {
   display: block;
   height: 32px;
 }
 
-/* NAV */
-.nav-list {
+.nav {
   display: flex;
-  gap: 32px;
+}
+
+.nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  gap: 32px;
+}
+
+.nav-item {
+  margin: 0;
 }
 
 .nav-link {
+  position: relative;
+
   display: flex;
   align-items: center;
+  height: 64px;
 
-  height: 48px;
   text-decoration: none;
-  color:#000;
+  color: var(--color-text);
   text-transform: uppercase;
-  position: relative;
 }
 
-/* Hover */
 .nav-link:hover {
   color: var(--color-blue);
 }
 
-/* Active */
 .nav-link.is-active {
   color: var(--color-blue);
 }
@@ -54,7 +68,7 @@ body {
 .nav-link.is-active::after {
   content: '';
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   left: 0;
 
   width: 100%;
